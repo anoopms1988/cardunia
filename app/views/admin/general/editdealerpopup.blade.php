@@ -1,5 +1,6 @@
- <div class="modal-dialog">
-         <div class="modal-content">
+{{Form::open(array('method'=>'post','url'=>'/admin/manipulatedealer'))}}
+<div class="modal-dialog">
+<div class="modal-content">
 <div class="modal-header">
        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
            <h4 class="modal-title" id="myModalLabel">Add New Dealer</h4>
@@ -28,6 +29,18 @@
                   @endforeach
                   </select>
        </div>
+       <div class="form-group">
+            <label>Address</label>
+            <textarea class="form-control" name="address"  id="address">{{{$Dealer->address or ''}}}</textarea>
+       </div>
+       <div class="form-group">
+            <label>Phone number</label>
+            <input type="text" name="phonenumber" id="phonenumber" value="{{{$Dealer->phonenumber or ''}}}"  class="form-control" placeholder="Enter text">
+        </div>
+       <div class="form-group">
+            <label>Mobile number</label>
+            <input type="text" name="mobilenumber" id="mobilenumber" value="{{{$Dealer->mobilenumber or ''}}}"  class="form-control" placeholder="Enter text">
+       </div>
 </div>
 <div class="modal-footer">
        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -35,3 +48,4 @@
  </div>
  </div>
  </div>
+ {{Form::close()}}

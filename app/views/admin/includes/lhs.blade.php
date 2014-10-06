@@ -20,7 +20,7 @@
                 <a  href=""><i class="fa fa-dashboard fa-fw"></i> Car Accessories</a>
             </li>
              <li>
-                <a href="#"><i class="collapsable fa fa-bar-chart-o fa-fw"></i>General mamagement<span class="fa arrow"></span></a>
+                <a href="#"><i class="collapsable fa fa-bar-chart-o fa-fw"></i>General management<span class="fa arrow"></span></a>
                 <ul id="general_management" class="nav nav-second-level ">
                     <li>
                         <a href="/admin/dealers">Car dealers</a>

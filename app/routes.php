@@ -42,5 +42,7 @@ Route::group(
         Route::post('addvariant', 'CarAdminController@addNewVariant');
         Route::get('dealers', 'GeneraldetailsAdminController@listAllDealers');
         Route::post('editdealerpopup', 'GeneraldetailsAdminController@displayEditDealerPopup');
+        Route::post('manipulatedealer','GeneraldetailsAdminController@manipulateEditDealerPopup');
+
     }
 );

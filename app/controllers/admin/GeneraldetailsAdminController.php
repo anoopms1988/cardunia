@@ -39,6 +39,8 @@ class GeneraldetailsAdminController extends BaseController
         return View::make('admin.general.editdealerpopup',array('Dealer'=>$Dealer,'cities'=>$cities,'companies'=>$companies));
     }
 
+    
+
 
 
 }
