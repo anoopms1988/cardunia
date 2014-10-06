@@ -27,9 +27,16 @@ class GeneraldetailsAdminController extends BaseController
 
     public function displayEditDealerPopup()
     {
-        $dealerId=Input::get('dealer_id');
-        $Dealer=Dealer::find($dealerId);
-        return View::make('admin.general.editdealerpopup',array('Dealer'=>$Dealer));
+        $dealerId=Input::get('dealer_id',null);
+        $cities=City::all();
+        $companies=Company::all();
+        if($dealerId){
+            $Dealer=Dealer::find($dealerId);
+        }else{
+            $Dealer=null;
+        }
+
+        return View::make('admin.general.editdealerpopup',array('Dealer'=>$Dealer,'cities'=>$cities,'companies'=>$companies));
     }
 
 

@@ -61,15 +61,7 @@
 <!-- /.col-lg-12 -->
 </div>
 <div class="modal fade" id="dealerModal" tabindex="-1" role="dialog" aria-labelledby="dealerModal" aria-hidden="true">
-
-     <div class="modal-dialog">
-         <div class="modal-content">
-            <div id="editdealer_display">
-
-            </div>
-         </div>
-     </div>
-
+     <div id="editdealer_display">{{--Edit/Add dealer modal window is shown here--}}</div>
 </div>
 @stop
 @section('script')
