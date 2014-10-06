@@ -25,12 +25,12 @@ class GeneraldetailsAdminController extends BaseController
         return View::make('admin.general.listdealers',array('dealerDetails'=>$dealerDetails));
     }
 
-   /* public function displayEditDealerPopup()
+    public function displayEditDealerPopup()
     {
         $dealerId=Input::get('dealer_id');
         $Dealer=Dealer::find($dealerId);
         return View::make('admin.general.editdealerpopup',array('Dealer'=>$Dealer));
-    }*/
+    }
 
 
 
