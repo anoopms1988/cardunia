@@ -22,6 +22,7 @@
     <th>Address</th>
     <th>Phone number</th>
     <th>Mobile number</th>
+    <th>Action</th>
 </tr>
 </thead>
 
@@ -34,7 +35,12 @@
     <td>{{{$dealerDetails_value->address or ''}}}</td>
     <td>{{{$dealerDetails_value->phonenumber or ''}}}</td>
     <td>{{{$dealerDetails_value->mobilenumber or ''}}}</td>
+    <td>
+        <button id="edit_{{$dealerDetails_value->id}}" class="manipulatedealerdetails btn btn-primary btn-circle" type="button" data-target="#dealerModal" data-toggle="modal"><i class="fa fa-list"></i></button>
+        <button id="delete_{{$dealerDetails_value->id}}" class="manipulatealerdetails btn btn-warning btn-circle" type="button"><i class="fa fa-times"></i></button>
+    </td>
 </tr>
+
 @endforeach
 
 </tbody>
@@ -53,5 +59,8 @@
 <!-- /.panel -->
 </div>
 <!-- /.col-lg-12 -->
+</div>
+<div class="modal fade" id="dealerModal" tabindex="-1" role="dialog" aria-labelledby="dealerModal" aria-hidden="true">
+     <div id="editdealer_display"></div>
 </div>
 @stop

@@ -28,5 +28,28 @@ $(document).ready(function(){
     });
 
 
+    $('.manipulatealerdetails').click(function(){
+        var composite_id=this.id;
+        var composite_arr=composite_id.split('_');
+        var action_type=composite_arr[0];
+        var dealer_id=composite_arr[1];
+        if(action_type=='edit'){
+            $.ajax({
+                url: '{{URL::to('/')}}/admin/editdealerpopup',
+                type: 'POST',
+                data: {dealer_id:dealer_id},
+                success: function (response) {
+                    $('#editdealer_display').html(response);
+                },
+                error: function () {
+                    //alert("error");
+                }
+            });
+        }else if(action_type=='delete'){
+
+        }
+    });
+
+
 });
 
