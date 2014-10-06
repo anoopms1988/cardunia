@@ -35,11 +35,41 @@ class GeneraldetailsAdminController extends BaseController
         }else{
             $Dealer=null;
         }
-
         return View::make('admin.general.editdealerpopup',array('Dealer'=>$Dealer,'cities'=>$cities,'companies'=>$companies));
     }
 
-    
+    public function manipulateEditDealerPopup()
+    {
+        $dealerId=Input::get('editdealer_id',null);
+        $companyId=Input::get('company',null);
+        $cityId   =Input::get('city',null);
+        $dealerName=Input::get('name',null);
+        $address=Input::get('address',null);
+        $phonenumber=Input::get('phonenumber',null);
+        $mobilenumber=Input::get('mobilenumber',null);
+
+        if($dealerId){
+            $Dealer=Dealer::find($dealerId);
+            $Dealer->company_id=$companyId;
+            $Dealer->city_id= $cityId;
+            $Dealer->name=  $dealerName;
+            $Dealer->address= $address;
+            $Dealer->phonenumber= $phonenumber;
+            $Dealer->mobilenumber= $mobilenumber;
+        }else{
+            $Dealer=new Dealer();
+            $Dealer->company_id=$companyId;
+            $Dealer->city_id= $cityId;
+            $Dealer->name=  $dealerName;
+            $Dealer->address= $address;
+            $Dealer->phonenumber= $phonenumber;
+            $Dealer->mobilenumber= $mobilenumber;
+        }
+        $Dealer->save();
+        return  Redirect::to('admin/dealers' );
+    }
+
+
 
 
 

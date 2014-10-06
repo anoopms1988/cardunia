@@ -1,9 +1,13 @@
-{{Form::open(array('method'=>'post','url'=>'/admin/manipulatedealer'))}}
+
+<form method="post" name="editdealer_form" id="editdealer_form" action="/admin/manipulatedealer">
+@if($Dealer)
+<input type="hidden" name="editdealer_id" id="editdealer_id" value="{{$Dealer->id}} ">
+@endif
 <div class="modal-dialog">
 <div class="modal-content">
 <div class="modal-header">
        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-           <h4 class="modal-title" id="myModalLabel">Add New Dealer</h4>
+       <h4 class="modal-title" id="myModalLabel">Add New Dealer</h4>
 </div>
 
 <div class="modal-body">
@@ -44,8 +48,8 @@
 </div>
 <div class="modal-footer">
        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <input type="submit" name="variantsubmit" class="btn btn-primary" value="Save">
+        <input type="submit" name="submit" class="btn btn-primary" value="Save">
  </div>
  </div>
  </div>
- {{Form::close()}}
+</form>

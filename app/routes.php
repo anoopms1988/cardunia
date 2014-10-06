@@ -40,7 +40,8 @@ Route::group(
         Route::post('addprice', 'CarAdminController@addPriceDetails');
         Route::post('addvariant', 'CarAdminController@addNewVariant');
         Route::post('addvariant', 'CarAdminController@addNewVariant');
-        Route::get('dealers', 'GeneraldetailsAdminController@listAllDealers');
+        Route::get('dealers','GeneraldetailsAdminController@listAllDealers');
+       // Route::post('dealers','GeneraldetailsAdminController@listAllDealers');
         Route::post('editdealerpopup', 'GeneraldetailsAdminController@displayEditDealerPopup');
         Route::post('manipulatedealer','GeneraldetailsAdminController@manipulateEditDealerPopup');
 
