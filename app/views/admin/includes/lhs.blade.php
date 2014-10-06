@@ -19,19 +19,19 @@
             <li>
                 <a  href=""><i class="fa fa-dashboard fa-fw"></i> Car Accessories</a>
             </li>
-         {{--   <li>
-                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level">
+             <li>
+                <a href="#"><i class="collapsable fa fa-bar-chart-o fa-fw"></i>General mamagement<span class="fa arrow"></span></a>
+                <ul id="general_management" class="nav nav-second-level ">
                     <li>
-                        <a href="flot.html">Flot Charts</a>
+                        <a href="/admin/dealers">Car dealers</a>
                     </li>
-                    <li>
+                    {{--<li>
                         <a href="morris.html">Morris.js Charts</a>
-                    </li>
+                    </li>--}}
                 </ul>
                 <!-- /.nav-second-level -->
-            </li>--}}
-           {{-- <li>
+             </li>-
+    {{--       <li>
                 <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
             </li>
             <li>
