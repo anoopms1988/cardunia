@@ -30,9 +30,9 @@ class City extends Eloquent implements UserInterface, RemindableInterface {
 
     public $timestamps=false;
 
-    public function company()
+    public function dealer()
     {
-        return $this->hasMany('Dealer');
+        return $this->hasMany('Dealer','city_id');
     }
 
 

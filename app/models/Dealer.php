@@ -37,7 +37,7 @@ class Dealer extends Eloquent implements UserInterface, RemindableInterface {
 
     public function city()
     {
-        return $this->belongsTo('Dealer');
+        return $this->belongsTo('City','city_id');
     }
 
 
