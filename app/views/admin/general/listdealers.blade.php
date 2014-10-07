@@ -1,3 +1,4 @@
+
 @extends('admin.layout.master')
 @section('content')
 <div class="row">
@@ -6,7 +7,7 @@
 <div class="panel panel-default">
 <div class="panel-heading">
     Dealer Details
-    <button class="btn btn-primary btn-lg " data-target="#addDealerModal" data-toggle="modal"> Add new dealer </button>
+    <button  id="edit_nothing"  class="manipulatedealerdetails btn btn-primary btn-lg " data-target="#dealerModal" data-toggle="modal"> Add new dealer </button>
 </div>
 <!-- /.panel-heading -->
 
@@ -89,77 +90,27 @@
                 }
             });
         }else if(action_type=='delete'){
-
+            if (confirm('Are you sure to delete the dealer')) {
+                $.ajax({
+                    url: '{{URL::to('/')}}/admin/deletedealer',
+                    type: 'POST',
+                    data: {dealer_id:dealer_id},
+                    success: function (response) {
+                        if (response.msg == 'success') {
+                            setTimeout(function(){location.reload(true)}, 3000);
+                        }
+                    },
+                    error: function () {
+                        alert("error");
+                    }
+                });
+            }
         }
     });
-         $("#editdealer_form").validate({
-                errorClass: "error",
-                errorElement: "div",
-                rules: {
-                    name: {
-                        required: true
-                    },
-                    city: {
-                        required: true
-                    },
-                    company: {
-                        required: true
-                     },
-                     address: {
-                        required: true
-                    },
-                    phonenumber: {
-                       required: true
-                    },
-                    mobilenumber: {
-                      required: true
-                    }
-                },
-                messages: {
-                     name: {
-                          required: "Field is required"
-                   },
-                   city: {
-                          required:"Field is required"
-                    },
-                   company: {
-                          required: "Field is required"
-                   },
-                   address: {
-                          required: "Field is required"
-                   },
-                   phonenumber: {
-                           required: "Field is required"
-                   },
-                    mobilenumber: {
-                             required: "Field is required"
-                   }
-                },
-                //perform an AJAX post to ajax.php
-                submitHandler: function () {
 
-                    $.ajax({
-                        url: '{{URL::to('/')}}/admin/manipulatedealer',
-                        type: 'POST',
-                        data: $("#editdealer_form").serialize(),
-                        success: function (response) {
 
-                            if (response.msg == 'success') {
 
-                                setTimeout(function(){location.reload(true)}, 3000);
-                            }else if(response.msg == 'duplicate'){
-                               // $("#duplicate_variant").show();
-                            }
-                        },
-                        error: function () {
-                            //alert("error");
-                        }
-                    });
 
-                },
-                highlight: function (element, errorClass) {
-                    $(element).removeClass(errorClass);
-                }
-            });
+
 </script>
 @stop

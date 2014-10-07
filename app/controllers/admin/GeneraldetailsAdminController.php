@@ -21,7 +21,7 @@ class GeneraldetailsAdminController extends BaseController
 
     public function listAllDealers()
     {
-        $dealerDetails=Dealer::paginate(10);
+        $dealerDetails=Dealer::where('is_active','=','1')->paginate(10);
         return View::make('admin.general.listdealers',array('dealerDetails'=>$dealerDetails));
     }
 
@@ -40,6 +40,7 @@ class GeneraldetailsAdminController extends BaseController
 
     public function manipulateEditDealerPopup()
     {
+
         $dealerId=Input::get('editdealer_id',null);
         $companyId=Input::get('company',null);
         $cityId   =Input::get('city',null);
@@ -66,7 +67,22 @@ class GeneraldetailsAdminController extends BaseController
             $Dealer->mobilenumber= $mobilenumber;
         }
         $Dealer->save();
-        return  Redirect::to('admin/dealers' );
+        //return  Redirect::to('admin/dealers' );
+        return Response::json(array('msg' => 'success'));
+    }
+
+    public function deleteDealer()
+    {
+        $dealerId=Input::get('dealer_id',null);
+            $Dealer=Dealer::find($dealerId);
+            $Dealer->is_active=0;
+            if($Dealer->save()){
+                return Response::json(array('msg' => 'success'));
+            }else{
+                return Response::json(array('msg' => 'failure'));
+            }
+
+
     }
 
 
