@@ -348,6 +348,8 @@ class CarAdminController extends BaseController
             foreach($variantDetails as $variantDetails_key=>$variantDetails_value){
                 $existingVariants[]=strtolower($variantDetails_value->name);
             }
+
+
             if(in_array(strtolower($variant),$existingVariants)){
                 return Response::json(array('msg' => 'duplicate'));
                 exit();

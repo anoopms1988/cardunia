@@ -20,7 +20,7 @@
             <select name="city" id="city" class="form-control">
             <option value=''>Select</option>
             @foreach($cities as $cities_key=>$cities_value)
-                @if($cities_value->id==$Dealer->city()->first()->id)
+                @if((isset($Dealer)&&!empty($Dealer))&&($cities_value->id==$Dealer->city()->first()->id))
                 <option value='{{$cities_value->id}}' selected>{{{$cities_value->name or ''}}}</option>
                 @else
                  <option value='{{$cities_value->id}}'>{{{$cities_value->name or ''}}}</option>
@@ -33,7 +33,7 @@
                   <select name="company" id="company" class="form-control">
                   <option value=''>Select</option>
                   @foreach($companies as $companies_key=>$companies_value)
-                  @if($companies_value->id==$Dealer->company()->first()->id)
+                  @if((isset($Dealer)&&!empty($Dealer))&&($companies_value->id==$Dealer->company()->first()->id))
                      <option value='{{$companies_value->id}}' selected>{{{$companies_value->name or ''}}}</option>
                   @else
                     <option value='{{$companies_value->id}}'>{{{$companies_value->name or ''}}}</option>

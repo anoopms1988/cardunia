@@ -65,6 +65,7 @@ class GeneraldetailsAdminController extends BaseController
             $Dealer->address= $address;
             $Dealer->phonenumber= $phonenumber;
             $Dealer->mobilenumber= $mobilenumber;
+            $Dealer->is_active= 1;
         }
         $Dealer->save();
         //return  Redirect::to('admin/dealers' );
