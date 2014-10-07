@@ -46,6 +46,15 @@ Route::group(
         Route::post('manipulatedealer','GeneraldetailsAdminController@manipulateEditDealerPopup');
         Route::post('deletedealer','GeneraldetailsAdminController@deleteDealer');
         Route::get('customers','CustomerAdminController@listAllCustomers');
+        Route::post('editcustomerpopup','CustomerAdminController@displayEditCustomerPopup');
+        Route::post('manipulatecustomer','CustomerAdminController@manipulateEditCustomerPopup');
+        Route::post('deletecustomer','CustomerAdminController@deleteCustomer');
+        Route::get('reviews','CustomerAdminController@listCustomerReviews');
+        //Route::post('editreviewpopup','CustomerAdminController@displayEditReviewPopup');
+        Route::post('deletereview','CustomerAdminController@deleteReview');
+        Route::post('reviewapprove','CustomerAdminController@customerReviewApprove');
+        // Route::post('customers','CustomerAdminController@listAllCustomers');
+
 
     }
 );

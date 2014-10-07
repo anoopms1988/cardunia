@@ -20,7 +20,6 @@
     <th>Email</th>
     <th>City</th>
     <th>Mobile number</th>
-
     <th>Action</th>
 </tr>
 </thead>
@@ -58,8 +57,56 @@
 </div>
 <!-- /.col-lg-12 -->
 </div>
-<div class="modal fade" id="dealerModal" tabindex="-1" role="dialog" aria-labelledby="dealerModal" aria-hidden="true">
-     <div id="editdealer_display">{{--Edit/Add dealer modal window is shown here--}}</div>
+<div class="modal fade" id="customerModal" tabindex="-1" role="dialog" aria-labelledby="customerModal" aria-hidden="true">
+     <div id="editcustomer_display"></div>
 </div>
 @stop
+@section('script')
+<script type="text/javascript">
+
+
+
+   $('.manipulatecustomerdetails').click(function(){
+        var composite_id=this.id;
+        var composite_arr=composite_id.split('_');
+        var action_type=composite_arr[0];
+        var customer_id=composite_arr[1];
+        if(action_type=='edit'){
+
+            $.ajax({
+                url: '{{URL::to('/')}}/admin/editcustomerpopup',
+                type: 'POST',
+                data: {customer_id:customer_id},
+                success: function (response) {
+
+                    $('#editcustomer_display').html(response);
+                },
+                error: function () {
+                    alert("error");
+                }
+            });
+        }else if(action_type=='delete'){
+            if (confirm('Are you sure to delete the customer')) {
+                            $.ajax({
+                                url: '{{URL::to('/')}}/admin/deletecustomer',
+                                type: 'POST',
+                                data: {customer_id:customer_id},
+                                success: function (response) {
+                                    if (response.msg == 'success') {
+                                        setTimeout(function(){location.reload(true)}, 3000);
+                                    }
+                                },
+                                error: function () {
+                                    alert("error");
+                                }
+                            });
+                        }
+        }
+    });
+
+
+
+
+
+</script>
 @stop
