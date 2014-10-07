@@ -25,6 +25,9 @@
                     <li>
                         <a href="/admin/dealers">Car dealers</a>
                     </li>
+                    <li>
+                       <a href="/admin/customers">Car customers</a>
+                     </li>
                     {{--<li>
                         <a href="morris.html">Morris.js Charts</a>
                     </li>--}}

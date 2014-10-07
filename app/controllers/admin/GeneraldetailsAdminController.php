@@ -11,9 +11,9 @@ class GeneraldetailsAdminController extends BaseController
     function __construct()
     {
 
-        if(!Auth::check()) {
+       // if(!Auth::check()) {
             $this->beforeFilter('auth');
-        }
+       // }
         $this->currentMenu='dealers';
 
     }

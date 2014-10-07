@@ -45,6 +45,7 @@ Route::group(
         Route::post('editdealerpopup', 'GeneraldetailsAdminController@displayEditDealerPopup');
         Route::post('manipulatedealer','GeneraldetailsAdminController@manipulateEditDealerPopup');
         Route::post('deletedealer','GeneraldetailsAdminController@deleteDealer');
+        Route::get('customers','CustomerAdminController@listAllCustomers');
 
     }
 );
