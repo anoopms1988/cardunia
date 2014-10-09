@@ -55,6 +55,8 @@ Route::group(
         Route::post('reviewapprove','CustomerAdminController@customerReviewApprove');
         Route::post('updatesafety','CarAdminController@updateSafetyFeatures');
         Route::post('updateinterior','CarAdminController@updateInteriorFeatures');
+        Route::post('updateexterior','CarAdminController@updateExteriorFeatures');
+
         // Route::post('customers','CustomerAdminController@listAllCustomers');
 
 
