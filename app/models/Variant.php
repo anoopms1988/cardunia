@@ -77,4 +77,9 @@ class Variant extends Eloquent implements UserInterface, RemindableInterface {
         return $this->hasOne('Review');
     }
 
+    public function variantSafety()
+    {
+        return $this->hasOne('VariantSafety');
+    }
+
 }

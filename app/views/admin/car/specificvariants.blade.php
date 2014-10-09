@@ -348,6 +348,57 @@
         </div>
             <!-- /.panel -->
     </div>
+    <div class="col-lg-6">
+            <div class="panel panel-default">
+                   <div class="panel-heading">
+                        Safety
+                       {{--  @if(!$variant->Price()->first())
+                            <button class="btn btn-primary btn-lg " data-target="#priceModal" data-toggle="modal"> Add price details</button>
+                         @else
+                                <button class="btn btn-primary btn-lg " data-target="#priceModal" data-toggle="modal"> Edit price details </button>
+                         @endif--}}
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                             {{Form::open(array( 'method' => 'post','name'=>'safety_features_form','url'=>'admin/updatesafety'))}}
+                            <table class="table table-striped table-bordered table-hover">
+                                <thead>
+                                <tr>
+                                     @foreach($safety as $safety_key=>$safety_value)
+                                    <th>{{{$safety_value->name or ''}}}</th>
+                                    @endforeach
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                     @foreach($safety as $safety_key=>$safety_value)
+                                    <td>
+                                        @if(in_array($safety_value->id,explode(',',$variant->variantSafety()->first()->features)))
+                                        <input type="checkbox" name="safety[]" value="{{{$safety_value->id or ''}}}" checked>
+                                        @else
+                                         <input type="checkbox" name="safety[]" value="{{{$safety_value->id or ''}}}" >
+                                        @endif
+                                    </td>
+                                    @endforeach
+                                </tr>
+                                </tbody>
+
+                            </table>
+                            <input type="submit" class="btn btn-primary" name="safetysubmit" value="Save">
+
+
+                            <input type="hidden" name="variant_id" value="{{$safety_value->id}}"
+
+
+                              {{Form::close()}}
+                        </div>
+                        <!-- /.table-responsive -->
+                    </div>
+                    <!-- /.panel-body -->
+            </div>
+                <!-- /.panel -->
+        </div>
     <!-- /.col-lg-6 -->
 </div>
 <div class="modal fade" id="engineModal" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">
