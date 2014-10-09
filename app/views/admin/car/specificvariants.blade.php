@@ -348,7 +348,7 @@
         </div>
             <!-- /.panel -->
     </div>
-    <div class="col-lg-6">
+    <div class="col-lg-12">
             <div class="panel panel-default">
                    <div class="panel-heading">
                         Safety
@@ -388,7 +388,7 @@
                             <input type="submit" class="btn btn-primary" name="safetysubmit" value="Save">
 
 
-                            <input type="hidden" name="variant_id" value="{{$safety_value->id}}"
+                            <input type="hidden" name="variant_id" value="{{$variant->first()->id}}">
 
 
                               {{Form::close()}}
@@ -399,6 +399,60 @@
             </div>
                 <!-- /.panel -->
         </div>
+       <div class="col-lg-12">
+                    <div class="panel panel-default">
+                           <div class="panel-heading">
+                                Interior
+
+                            </div>
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="table-responsive">
+
+                                       {{Form::open(array( 'method' => 'post','name'=>'interior_features_form','url'=>'admin/updateinterior'))}}
+
+                                    <table class="table table-striped table-bordered table-hover">
+                                        <thead>
+                                        <tr>
+                                             @foreach($interior as $interior_key=>$interior_value)
+                                            <th>{{{$interior_value->name or ''}}}</th>
+                                            @endforeach
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                             @foreach($interior as $interior_key=>$interior_value)
+                                           <td>
+                                                @if($variant->variantInterior()->first())
+
+                                                @if(in_array($interior_value->id,explode(',',$variant->variantInterior()->first()->features)))
+                                                <input type="checkbox" name="interior[]" value="{{{$interior_value->id or '' }}}" checked>
+                                                @else
+                                                 <input type="checkbox" name="interior[]" value="{{{$interior_value->id or ''}}}" >
+                                                @endif
+                                               @else
+                                                 <input type="checkbox" name="interior[]" value="{{{$interior_value->id or ''}}}" >
+                                               @endif
+                                            </td>
+                                            @endforeach
+                                        </tr>
+                                        </tbody>
+
+                                    </table>
+                                         <input type="submit" class="btn btn-primary" name="interiorsubmit" value="Save">
+                                    <input type="hidden" name="variant_id"  value="{{$variant->first()->id}}" >
+
+
+
+ {{Form::close()}}
+
+                                </div>
+                                <!-- /.table-responsive -->
+                            </div>
+                            <!-- /.panel-body -->
+                    </div>
+                        <!-- /.panel -->
+                </div>
     <!-- /.col-lg-6 -->
 </div>
 <div class="modal fade" id="engineModal" tabindex="-1" role="dialog" aria-labelledby="engineModal" aria-hidden="true">

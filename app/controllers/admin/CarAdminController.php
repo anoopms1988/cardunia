@@ -95,9 +95,10 @@ class CarAdminController extends BaseController
     {
         $variant = Variant::find($variantId);
         $safety  = Safety::all();
+        $interior=Interior::all();
         return View::make(
             'admin.car.specificvariants',
-            array('variant' => $variant, 'safety' => $safety, 'currentMenu' => $this->currentMenu)
+            array('variant' => $variant, 'safety' => $safety,'interior'=>$interior, 'currentMenu' => $this->currentMenu)
         );
     }
 
@@ -392,6 +393,29 @@ class CarAdminController extends BaseController
             }
         }
 
+        return Redirect::to('admin/specificvariant/' . $variantId);
+    }
+
+    public function updateInteriorFeatures()
+    {
+        $variantId = Input::get('variant_id', null);
+        $interior   = Input::get('interior');
+        if ($interior) {
+            $interiorFeatures = implode(',', $interior);
+            if ($variantId) {
+                $VariantInterior = VariantInterior::find($variantId);
+                if ($VariantInterior) {
+                    $VariantInterior->variant_id = $variantId;
+                    $VariantInterior->features   =  $interiorFeatures;
+                    $VariantInterior->save();
+                } else {
+                    $NewVariantInterior             = new VariantInterior();
+                    $NewVariantInterior ->variant_id = $variantId;
+                    $NewVariantInterior ->features   =  $interiorFeatures;
+                    $NewVariantInterior ->save();
+                }
+            }
+        }
         return Redirect::to('admin/specificvariant/' . $variantId);
     }
 
