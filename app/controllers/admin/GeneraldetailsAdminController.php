@@ -88,5 +88,11 @@ class GeneraldetailsAdminController extends BaseController
 
     }
 
+    public function listCustomerEnquiries()
+    {
+        $enquiryDetails = CustomerEnquiry::where('is_active', '=', '1')->paginate(10);
+        return View::make('admin.general.listenquiries', array('enquiryDetails' => $enquiryDetails));
+    }
+
 
 }

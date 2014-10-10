@@ -57,6 +57,7 @@ Route::group(
         Route::post('updateinterior','CarAdminController@updateInteriorFeatures');
         Route::post('updateexterior','CarAdminController@updateExteriorFeatures');
         Route::post('uploadimage','CarAdminController@uploadVariantImage');
+        Route::get('enquiry','GeneraldetailsAdminController@listCustomerEnquiries');
 
         // Route::post('customers','CustomerAdminController@listAllCustomers');
 

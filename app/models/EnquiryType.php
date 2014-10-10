@@ -1,11 +1,17 @@
 <?php
-
+/**
+ * Created by PhpStorm.
+ * User: toobler
+ * Date: 10/10/14
+ * Time: 4:50 PM
+ */
 use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class Customer extends Eloquent implements UserInterface, RemindableInterface {
+class EnquiryType extends Eloquent implements UserInterface, RemindableInterface
+{
 
     use UserTrait, RemindableTrait;
 
@@ -14,7 +20,7 @@ class Customer extends Eloquent implements UserInterface, RemindableInterface {
      *
      * @var string
      */
-    protected $table = 'customers';
+    protected $table = 'enquiry_type';
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -25,20 +31,9 @@ class Customer extends Eloquent implements UserInterface, RemindableInterface {
 
     public $timestamps=false;
 
-    public function city()
-    {
-        return $this->belongsTo('City');
-    }
 
-    public function review()
-    {
-        return $this->hasOne('Review');
-    }
-
-    public function customerEnquiry()
-    {
-        return $this->hasMany('CustomerEnquiry');
-    }
-
-
+     public function customerEnquiry()
+     {
+         return $this->hasMany('CustomerEnquiry');
+     }
 }

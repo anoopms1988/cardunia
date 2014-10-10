@@ -105,7 +105,6 @@
                 success: function (response) {
 
                     if (response.msg == 'success') {
-
                         setTimeout(function(){location.reload(true)}, 3000);
                     }else if(response.msg == 'duplicate'){
                         $("#duplicate_variant").show();

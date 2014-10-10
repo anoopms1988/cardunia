@@ -30,7 +30,7 @@
     <td>{{{$reviews_value->customer()->first()->first_name or ''}}}&nbsp;{{{$reviews_value->customer()->first()->last_name or ''}}}</td>
     <td>{{{$reviews_value->customer()->first()->city()->first()->name or ''}}}</td>
     <td>{{{$reviews_value->variant()->first()->name or ''}}}</td>
-    <td>{{{$reviews_value->reviews or ''}}}</td>
+    <td>{{str_limit($reviews_value->reviews,$limit = 20, $end = '...') }}</td>
     <td>
     @if($reviews_value->is_approved==1)
           Yes
