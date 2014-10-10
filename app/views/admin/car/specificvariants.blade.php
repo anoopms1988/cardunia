@@ -372,6 +372,7 @@
                                 </thead>
                                 <tbody>
                                 <tr>
+                                     @if($variant->variantSafety()->first())
                                      @foreach($safety as $safety_key=>$safety_value)
                                     <td>
                                         @if(in_array($safety_value->id,explode(',',$variant->variantSafety()->first()->features)))
@@ -381,6 +382,7 @@
                                         @endif
                                     </td>
                                     @endforeach
+                                    @endif
                                 </tr>
                                 </tbody>
 
