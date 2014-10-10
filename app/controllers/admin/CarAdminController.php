@@ -443,5 +443,28 @@ class CarAdminController extends BaseController
         return Redirect::to('admin/specificvariant/' . $variantId);
     }
 
+    public function uploadVariantImage()
+    {
+        $variantId = Input::get('variant_id',null);
+        $Variant=Variant::find($variantId);
+        $variantName=$Variant->name;
+        $Car=$Variant->car()->first()->name;
+        $company=$Variant->car()->first()->company()->first()->name;
+        $destinationPath='public/dashboard/images/'.$company.'/'. $Car.'/'.$variantName;
+
+        $fileCount = 0;
+        $dir = $destinationPath;
+        if ($handle = opendir($dir)) {
+            while (($file = readdir($handle)) !== false){
+                if (!in_array($file, array('.', '..')) && !is_dir($dir.$file))
+                    $fileCount++;
+            }
+        }
+
+        $extension = Input::file('variantimage')->getClientOriginalExtension();
+        $fileName =$variantName.$fileCount.'.' .$extension;
+        Input::file('variantimage')->move($destinationPath,$fileName);
+        return Redirect::to('admin/specificvariant/' . $variantId);
+    }
 
 }

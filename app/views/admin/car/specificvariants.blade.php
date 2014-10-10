@@ -507,6 +507,30 @@
                                     </div>
                                         <!-- /.panel -->
                                 </div>
+                                <div class="col-lg-12">
+                                                                    <div class="panel panel-default">
+                                                                           <div class="panel-heading">
+                                                                                Image upload
+
+                                                                            </div>
+                                                                            <!-- /.panel-heading -->
+                                                                            <div class="panel-body">
+                                                                                <div class="table-responsive">
+
+                                                                                       {{Form::open(array( 'method' => 'post','name'=>'exterior_features_form','url'=>'admin/uploadimage','files' => true))}}
+
+                                                                                             <input name="variantimage" type="file" />
+                                                                                             <input type="hidden" name="variant_id"  value="{{$variant->first()->id}}">
+                                                                                             <input type="submit" class="btn btn-primary" name="imagesubmit" value="Save">
+                                                                                        {{Form::close()}}
+
+                                                                                </div>
+                                                                                <!-- /.table-responsive -->
+                                                                            </div>
+                                                                            <!-- /.panel-body -->
+                                                                    </div>
+                                                                        <!-- /.panel -->
+                                                                </div>
 
     <!-- /.col-lg-6 -->
 </div>
