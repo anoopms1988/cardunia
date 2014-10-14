@@ -94,5 +94,17 @@ class GeneraldetailsAdminController extends BaseController
         return View::make('admin.general.listenquiries', array('enquiryDetails' => $enquiryDetails));
     }
 
+    public function deleteCustomerEnquiries()
+    {
+        $enquiryId          = Input::get('enquiry_id', null);
+        $Enquiry            = CustomerEnquiry::find($enquiryId);
+        $Enquiry->is_active = 0;
+        if ($Enquiry->save()) {
+            return Response::json(array('msg' => 'success'));
+        } else {
+            return Response::json(array('msg' => 'failure'));
+        }
+    }
+
 
 }

@@ -5,14 +5,14 @@
     <div class="panel panel-default">
         <div class="panel-heading">
            Enquiry Details
-            <button  id="edit_nothing"  class="manipulateenquirydetails btn btn-primary btn-lg " data-target="#enquiryModal" data-toggle="modal"> Add new enquiry </button>
+            {{--<button  id="edit_nothing"  class="manipulateenquirydetails btn btn-primary btn-lg " data-target="#enquiryModal" data-toggle="modal"> Add new enquiry </button>--}}
         </div>
         <!-- /.panel-heading -->
 
         <div class="panel-body">
             <div class="table-responsive">
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
-                    @if($enquiryDetails)
+                    @if(count($enquiryDetails)>0)
                     <thead>
                     <tr>
                         <th>Type</th>
@@ -33,7 +33,7 @@
                         <td>{{{$enquiryDetails_value->customer()->first()->mobilenumber  or ''}}}</td>
                         <td>{{{$enquiryDetails_value->enquiry or ''}}}</td>
                         <td>
-                            <button id="edit_{{$enquiryDetails_value->id}}" class="manipulateenquirydetails btn btn-primary btn-circle" type="button" data-target="#enquiryModal" data-toggle="modal"><i class="fa fa-list"></i></button>
+                            {{--<button id="edit_{{$enquiryDetails_value->id}}" class="manipulateenquirydetails btn btn-primary btn-circle" type="button" data-target="#enquiryModal" data-toggle="modal"><i class="fa fa-list"></i></button>--}}
                             <button id="delete_{{$enquiryDetails_value->id}}" class="manipulateenquirydetails btn btn-warning btn-circle" type="button"><i class="fa fa-times"></i></button>
                         </td>
                     </tr>
@@ -67,41 +67,26 @@
 
 
     $('.manipulateenquirydetails').click(function(){
-    /*    var composite_id=this.id;
-        var composite_arr=composite_id.split('_');
-        var action_type=composite_arr[0];
-        var dealer_id=composite_arr[1];
-        if(action_type=='edit'){
-
-            $.ajax({
-                url: '{{URL::to('/')}}/admin/editdealerpopup',
-                type: 'POST',
-                data: {dealer_id:dealer_id},
-                success: function (response) {
-
-                    $('#editdealer_display').html(response);
-                },
-                error: function () {
-                    alert("error");
-                }
-            });
-        }else if(action_type=='delete'){
-            if (confirm('Are you sure to delete the dealer')) {
-                $.ajax({
-                    url: '{{URL::to('/')}}/admin/deletedealer',
-                    type: 'POST',
-                    data: {dealer_id:dealer_id},
-                    success: function (response) {
-                        if (response.msg == 'success') {
-                            setTimeout(function(){location.reload(true)}, 3000);
-                        }
-                    },
-                    error: function () {
-                        alert("error");
+              var composite_id=this.id;
+                    var composite_arr=composite_id.split('_');
+                    var action_type=composite_arr[0];
+                    var enquiry_id=composite_arr[1];
+             if (confirm('Are you sure to delete the enquiry')) {
+                        $.ajax({
+                            url: '{{URL::to('/')}}/admin/deleteenquiry',
+                            type: 'POST',
+                            data: {enquiry_id:enquiry_id},
+                            success: function (response) {
+                                if (response.msg == 'success') {
+                                    setTimeout(function(){location.reload(true)}, 3000);
+                                }
+                            },
+                            error: function () {
+                                alert("error");
+                            }
+                        });
                     }
-                });
-            }
-        }*/
+
     });
 
 
