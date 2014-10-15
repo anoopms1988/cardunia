@@ -11,22 +11,23 @@ class GeneraldetailsAdminController extends BaseController
     function __construct()
     {
 
-        // if(!Auth::check()) {
         $this->beforeFilter('auth');
-        // }
-        $this->currentMenu = 'dealers';
-
     }
 
 
     public function listAllDealers()
     {
+        //$mainmenu and $currentmenu is not written in constructor
+        $mainmenu='generalmanagement';
+        $currentmenu='dealer';
         $dealerDetails = Dealer::where('is_active', '=', '1')->paginate(10);
-        return View::make('admin.general.listdealers', array('dealerDetails' => $dealerDetails));
+        return View::make('admin.general.listdealers', array('dealerDetails' => $dealerDetails,'mainmenu'=>$mainmenu,'currentmenu'=>$currentmenu));
     }
 
     public function displayEditDealerPopup()
     {
+        $mainmenu='generalmanagement';
+        $currentmenu='dealer';
         $dealerId  = Input::get('dealer_id', null);
         $cities    = City::all();
         $companies = Company::all();
@@ -36,7 +37,7 @@ class GeneraldetailsAdminController extends BaseController
             $Dealer = null;
         }
         return View::make(
-            'admin.general.editdealerpopup', array('Dealer' => $Dealer, 'cities' => $cities, 'companies' => $companies)
+            'admin.general.editdealerpopup', array('Dealer' => $Dealer, 'cities' => $cities, 'companies' => $companies,'mainmenu'=>$mainmenu,'currentmenu'=>$currentmenu)
         );
     }
 
@@ -90,8 +91,9 @@ class GeneraldetailsAdminController extends BaseController
 
     public function listCustomerEnquiries()
     {
+        $mainmenu='generalmanagement';
         $enquiryDetails = CustomerEnquiry::where('is_active', '=', '1')->paginate(10);
-        return View::make('admin.general.listenquiries', array('enquiryDetails' => $enquiryDetails));
+        return View::make('admin.general.listenquiries', array('enquiryDetails' => $enquiryDetails,'mainmenu'=>$mainmenu));
     }
 
     public function deleteCustomerEnquiries()

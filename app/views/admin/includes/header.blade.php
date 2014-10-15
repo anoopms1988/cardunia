@@ -280,19 +280,19 @@
                 <!-- /input-group -->
             </li>
             <li>
-               <a @if(isset($currentMenu)&&$currentMenu=='car') class='active' @endif href="/admin/dashboard"><i class="fa fa-dashboard fa-fw"></i> Cars</a>
+               <a  href="/admin/dashboard"><i class="fa fa-dashboard fa-fw"></i> Cars</a>
             </li>
              <li>
-                           <a  href=""><i class="fa fa-dashboard fa-fw"></i> Car Accessories</a>
+                           <a  href="" ><i class="fa fa-dashboard fa-fw"></i> Car Accessories</a>
                        </li>
                         <li >
-                           <a data-toggle="collapse" href="#"><i class="collapsable fa fa-bar-chart-o fa-fw"></i>General management<span class="fa arrow"></span></a>
-                           <ul  class="nav nav-second-level ">
+                           <a data-toggle="collapse" href="#" ><i class="collapsable fa fa-bar-chart-o fa-fw"></i>General management<span class="fa arrow"></span></a>
+                           <ul  @if(isset($mainmenu)&&$mainmenu=='generalmanagement') class='nav nav-second-level collapse in' @else class="nav nav-second-level" @endif>
                                <li>
-                                   <a href="/admin/dealers">Car dealers</a>
+                                   <a @if(isset($currentmenu)&&$currentmenu=='dealer') class="'active" @endif href="/admin/dealers">Car dealers</a>
                                </li>
                                <li>
-                                  <a href="/admin/customers">Car customers</a>
+                                  <a href="/admin/customers" >Car customers</a>
                                 </li>
                                 <li>
                                   <a href="/admin/reviews">Car reviews</a>
@@ -300,9 +300,7 @@
                                <li>
                                    <a href="/admin/enquiry">Customer enquiry</a>
                                </li>
-                               {{--<li>
-                                   <a href="morris.html">Morris.js Charts</a>
-                               </li>--}}
+
                            </ul>
                            <!-- /.nav-second-level -->
                         </li>

@@ -14,13 +14,13 @@
                 <!-- /input-group -->
             </li>
             <li>
-                <a @if(isset($currentMenu)&&$currentMenu=='car') class='active' @endif href="/admin/dashboard"><i class="fa fa-dashboard fa-fw"></i> Cars</a>
+                <a  href="/admin/dashboard"><i class="fa fa-dashboard fa-fw"></i> Cars</a>
             </li>
             <li>
                 <a  href=""><i class="fa fa-dashboard fa-fw"></i> Car Accessories</a>
             </li>
              <li >
-                <a data-toggle="collapse" href="#"><i class="collapsable fa fa-bar-chart-o fa-fw"></i>General management<span class="fa arrow"></span></a>
+                <a data-toggle="collapse " href="#"><i class="collapsable fa fa-bar-chart-o fa-fw"></i>General management<span class="fa arrow"></span></a>
                 <ul  class="nav nav-second-level ">
                     <li>
                         <a href="/admin/dealers">Car dealers</a>
