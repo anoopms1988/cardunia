@@ -8,7 +8,7 @@
     <meta name="author" content="http://bootstraptaste.com">
     <link rel="shortcut icon" href="{{URL::to('/')}}/assets/img/favicon.png">
 
-    <title>Webuild - Free Bootstrap coming soon template with countdown</title>
+    <title>Cardunia</title>
 
     <!-- Bootstrap -->
     <link href="{{URL::to('/')}}/assets/css/bootstrap.css" rel="stylesheet">
