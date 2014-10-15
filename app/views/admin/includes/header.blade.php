@@ -1,5 +1,4 @@
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -35,9 +34,6 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-
-
-
     <![endif]-->
 
 </head>
@@ -260,10 +256,62 @@
         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
         </li>
         <li class="divider"></li>
-        <li><a href="/admin/logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
         </li>
     </ul>
     <!-- /.dropdown-user -->
 </li>
 <!-- /.dropdown -->
 </ul>
+<!-- /.navbar-top-links -->
+
+<div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+        <ul class="nav" id="side-menu">
+            <li class="sidebar-search">
+                <div class="input-group custom-search-form">
+                    <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                </div>
+                <!-- /input-group -->
+            </li>
+            <li>
+               <a @if(isset($currentMenu)&&$currentMenu=='car') class='active' @endif href="/admin/dashboard"><i class="fa fa-dashboard fa-fw"></i> Cars</a>
+            </li>
+             <li>
+                           <a  href=""><i class="fa fa-dashboard fa-fw"></i> Car Accessories</a>
+                       </li>
+                        <li >
+                           <a data-toggle="collapse" href="#"><i class="collapsable fa fa-bar-chart-o fa-fw"></i>General management<span class="fa arrow"></span></a>
+                           <ul  class="nav nav-second-level ">
+                               <li>
+                                   <a href="/admin/dealers">Car dealers</a>
+                               </li>
+                               <li>
+                                  <a href="/admin/customers">Car customers</a>
+                                </li>
+                                <li>
+                                  <a href="/admin/reviews">Car reviews</a>
+                               </li>
+                               <li>
+                                   <a href="/admin/enquiry">Customer enquiry</a>
+                               </li>
+                               {{--<li>
+                                   <a href="morris.html">Morris.js Charts</a>
+                               </li>--}}
+                           </ul>
+                           <!-- /.nav-second-level -->
+                        </li>
+
+
+
+        </ul>
+    </div>
+    <!-- /.sidebar-collapse -->
+</div>
+<!-- /.navbar-static-side -->
+</nav>
