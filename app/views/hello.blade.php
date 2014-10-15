@@ -33,19 +33,19 @@
 					<h1>Cardunia</h1>
 					<h2 class="subtitle">We're working hard to launch our first beta product.Thanks for showing interest in our service</h2>
 					<div id="countdown"></div>
-					<form class="form-inline signup" role="form">
+					{{--<form class="form-inline signup" role="form">
 					  <div class="form-group">
 					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
 					  </div>
 					  <button type="submit" class="btn btn-theme">Get notified!</button>
 					</form>
-
+--}}
 				</div>
 
 			</div>
 			<div class="row">
 				<div class="col-lg-6 col-lg-offset-3">
-						<p class="copyright">Copyright &copy; 2014 - <a href="http://cardunia.com">Cardunia.com</a></p>
+						<p class="copyright">Copyright &copy; 2014 - <a href="#">Cardunia.com</a></p>
 				</div>
 			</div>
 		</div>
