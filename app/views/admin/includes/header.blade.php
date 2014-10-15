@@ -305,7 +305,19 @@
                            <!-- /.nav-second-level -->
                         </li>
 
+                         <li >
+                            <a data-toggle="collapse" href="#" ><i class="collapsable fa fa-bar-chart-o fa-fw"></i>General enquiries<span class="fa arrow"></span></a>
+                           <ul  @if(isset($mainmenu)&&$mainmenu=='generalenquiries') class='nav nav-second-level collapse in' @else class="nav nav-second-level" @endif>
+                                <li>
+                                    <a @if(isset($currentmenu)&&$currentmenu=='insurance') class="'active" @endif href="/admin/insurance">Insurance enquiries</a>
+                                 </li>
+                                <li>
+                                    <a @if(isset($currentmenu)&&$currentmenu=='loan') class="'active" @endif href="/admin/loan" >Loan enquiries</a>
+                                </li>
 
+                           </ul>
+                                                   <!-- /.nav-second-level -->
+                         </li>
 
         </ul>
     </div>

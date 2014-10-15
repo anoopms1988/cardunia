@@ -59,6 +59,7 @@ Route::group(
         Route::post('uploadimage','CarAdminController@uploadVariantImage');
         Route::get('enquiry','GeneraldetailsAdminController@listCustomerEnquiries');
         Route::post('deleteenquiry','GeneraldetailsAdminController@deleteCustomerEnquiries');
+        Route::get('insurance','GeneralEnquiriesAdminController@listInsuranceEnquiries');
         // Route::post('customers','CustomerAdminController@listAllCustomers');
 
 

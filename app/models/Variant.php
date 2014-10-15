@@ -91,5 +91,10 @@ class Variant extends Eloquent implements UserInterface, RemindableInterface {
         return $this->hasOne('VariantExterior');
     }
 
+    public function insuranceEnquiry()
+    {
+        return $this->hasMany('InsuranceEnquiry');
+    }
+
 
 }

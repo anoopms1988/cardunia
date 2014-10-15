@@ -31,6 +31,11 @@ class Cartype extends Eloquent implements UserInterface, RemindableInterface {
 
     public $timestamps=false;
 
+    public function insuranceEnquiry()
+    {
+        return $this->hasMany('InsuranceEnquiry','cartype_id');
+    }
+
 
 
 }

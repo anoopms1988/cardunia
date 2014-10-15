@@ -35,4 +35,13 @@ class InsuranceEnquiry extends Eloquent implements UserInterface, RemindableInte
         return $this->belongsTo('City');
     }
 
+    public function carType()
+    {
+        return $this->belongsTo('Cartype','cartype_id');
+    }
+
+    public function variant()
+    {
+        return $this->belongsTo('Variant');
+    }
 }
