@@ -92,8 +92,9 @@ class GeneraldetailsAdminController extends BaseController
     public function listCustomerEnquiries()
     {
         $mainmenu='generalmanagement';
+        $currentmenu='enquiry';
         $enquiryDetails = CustomerEnquiry::where('is_active', '=', '1')->paginate(10);
-        return View::make('admin.general.listenquiries', array('enquiryDetails' => $enquiryDetails,'mainmenu'=>$mainmenu));
+        return View::make('admin.general.listenquiries', array('enquiryDetails' => $enquiryDetails,'mainmenu'=>$mainmenu,'currentmenu'=>$currentmenu));
     }
 
     public function deleteCustomerEnquiries()

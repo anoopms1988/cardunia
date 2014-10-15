@@ -16,12 +16,16 @@ class CustomerAdminController extends BaseController
 
    public function listAllCustomers()
    {
+       $mainmenu='generalmanagement';
+       $currentmenu='dealer';
        $Customers=Customer::where('is_active','=','1')->paginate(10);
-       return View::make('admin.general.listcustomers',array('Customers'=>$Customers));
+       return View::make('admin.general.listcustomers',array('Customers'=>$Customers,'mainmenu'=>$mainmenu,'currentmenu'=>$currentmenu));
    }
 
     public function displayEditCustomerPopup()
     {
+        $mainmenu='generalmanagement';
+        $currentmenu='dealer';
         $customerId=Input::get('customer_id',null);
         $cities=City::all();
         $companies=Company::all();
@@ -30,7 +34,7 @@ class CustomerAdminController extends BaseController
         }else{
             $Customer=null;
         }
-        return View::make('admin.customer.editcustomerpopup',array('Customer'=>$Customer,'cities'=>$cities,'companies'=>$companies));
+        return View::make('admin.customer.editcustomerpopup',array('Customer'=>$Customer,'cities'=>$cities,'companies'=>$companies,'mainmenu'=>$mainmenu,'currentmenu'=>$currentmenu));
     }
 
     public function manipulateEditCustomerPopup()
@@ -78,10 +82,12 @@ class CustomerAdminController extends BaseController
 
     public function listCustomerReviews()
     {
+        $mainmenu='generalmanagement';
+        $currentmenu='review';
         $reviews=Review::where('is_approved','=','1')
             ->where('is_active','=','1')
             ->paginate(10);
-        return View::make('admin.customer.listcustomerreviews',array('reviews'=>$reviews));
+        return View::make('admin.customer.listcustomerreviews',array('reviews'=>$reviews,'mainmenu'=>$mainmenu,'currentmenu'=>$currentmenu));
     }
 
     public function deleteReview()

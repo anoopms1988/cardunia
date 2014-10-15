@@ -280,7 +280,7 @@
                 <!-- /input-group -->
             </li>
             <li>
-               <a  href="/admin/dashboard"><i class="fa fa-dashboard fa-fw"></i> Cars</a>
+               <a   @if(isset($currentmenu)&&$currentmenu=='car') class='active' @endif href="/admin/dashboard"><i class="fa fa-dashboard fa-fw"></i> Cars</a>
             </li>
              <li>
                            <a  href="" ><i class="fa fa-dashboard fa-fw"></i> Car Accessories</a>
@@ -292,13 +292,13 @@
                                    <a @if(isset($currentmenu)&&$currentmenu=='dealer') class="'active" @endif href="/admin/dealers">Car dealers</a>
                                </li>
                                <li>
-                                  <a href="/admin/customers" >Car customers</a>
+                                  <a @if(isset($currentmenu)&&$currentmenu=='customer') class="'active" @endif href="/admin/customers" >Car customers</a>
                                 </li>
                                 <li>
-                                  <a href="/admin/reviews">Car reviews</a>
+                                  <a @if(isset($currentmenu)&&$currentmenu=='review') class="'active" @endif href="/admin/reviews">Car reviews</a>
                                </li>
                                <li>
-                                   <a href="/admin/enquiry">Customer enquiry</a>
+                                   <a @if(isset($currentmenu)&&$currentmenu=='enquiry') class="'active" @endif href="/admin/enquiry">Customer enquiry</a>
                                </li>
 
                            </ul>
