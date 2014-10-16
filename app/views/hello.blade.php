@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Free coming soon template with jQuery countdown">
     <meta name="author" content="http://bootstraptaste.com">
-    <link rel="shortcut icon" href="{{URL::to('/')}}/assets/img/favicon.png">
+    <link rel="shortcut icon" href="{{URL::to(trim('/'))}}/assets/img/favicon.png">
 
     <title>Cardunia</title>
 
     <!-- Bootstrap -->
-    <link href="{{URL::to('/')}}/assets/css/bootstrap.css" rel="stylesheet">
-    <link href="{{URL::to('/')}}/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="{{URL::to(trim('/'))}}/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="{{URL::to(trim('/'))}}/assets/css/bootstrap-theme.css" rel="stylesheet">
 
     <!-- siimple style -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -56,8 +56,8 @@
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="{{URL::to('/')}}/assets/js/bootstrap.min.js"></script>
-<script src="{{URL::to('/')}}/assets/js/jquery.countdown.min.js"></script>
+<script src="{{URL::to(trim('/'))}}/assets/js/bootstrap.min.js"></script>
+<script src="{{URL::to(trim('/'))}}/assets/js/jquery.countdown.min.js"></script>
 <script type="text/javascript">
     $('#countdown').countdown('2015/01/01', function (event) {
         $(this).html(event.strftime('%w weeks %d days <br /> %H:%M:%S'));

@@ -12,22 +12,22 @@
     <title>Cardunia</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{URL::to('/')}}/dashboard/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{URL::to(trim('/'))}}/dashboard/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="{{URL::to('/')}}/dashboard/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="{{URL::to(trim('/'))}}/dashboard/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
 
     <!-- Timeline CSS -->
-    <link href="{{URL::to('/')}}/dashboard/css/plugins/timeline.css" rel="stylesheet">
+    <link href="{{URL::to(trim('/'))}}/dashboard/css/plugins/timeline.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="{{URL::to('/')}}/dashboard/css/sb-admin-2.css" rel="stylesheet">
+    <link href="{{URL::to(trim('/'))}}/dashboard/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="{{URL::to('/')}}/dashboard/css/plugins/morris.css" rel="stylesheet">
+    <link href="{{URL::to(trim('/'))}}/dashboard/css/plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="{{URL::to('/')}}/dashboard/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{{URL::to(trim('/'))}}/dashboard/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

@@ -83,7 +83,7 @@
         if (action_type == 'edit') {
 
             $.ajax({
-                url: '{{URL::to(' / ')}}/admin/editdealerpopup',
+                url: '{{URL::to(trim('/'))}}/admin/editdealerpopup',
                 type: 'POST',
                 data: {dealer_id: dealer_id},
                 success: function (response) {
@@ -97,7 +97,7 @@
         } else if (action_type == 'delete') {
             if (confirm('Are you sure to delete the dealer')) {
                 $.ajax({
-                    url: '{{URL::to(' / ')}}/admin/deletedealer',
+                    url: '{{URL::to(trim('/'))}}/admin/deletedealer',
                     type: 'POST',
                     data: {dealer_id: dealer_id},
                     success: function (response) {

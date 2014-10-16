@@ -5,7 +5,7 @@
     <div class="col-lg-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-                Customer Reviews
+                Editorial Reviews
             </div>
             <!-- /.panel-heading -->
 
@@ -72,7 +72,7 @@
 
             if (confirm('Are you sure to delete the review')) {
                 $.ajax({
-                    url: '{{URL::to('/')}}/admin/deleteeditorialreview',
+                    url: '{{URL::to(trim('  /  '))}}/admin/deleteeditorialreview',
                     type: 'POST',
                     data: {review_id: review_id},
                     success: function (response) {

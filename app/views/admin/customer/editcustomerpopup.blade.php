@@ -95,7 +95,7 @@
         submitHandler: function () {
 
             $.ajax({
-                url: '{{URL::to(' / ')}}/admin/manipulatecustomer',
+                url: '{{URL::to(trim('/'))}}/admin/manipulatecustomer',
                 type: 'POST',
                 data: $("#editcustomer_form").serialize(),
                 success: function (response) {

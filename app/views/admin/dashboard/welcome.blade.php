@@ -98,7 +98,7 @@
         //perform an AJAX post to ajax.php
         submitHandler: function () {
             $.ajax({
-                url: '{{URL::to(' / ')}}/admin/addcar',
+                url: '{{URL::to(trim('  /  '))}}/admin/addcar',
                 type: 'POST',
                 data: $("#add_car_form").serialize(),
                 success: function (response) {

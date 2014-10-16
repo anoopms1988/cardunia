@@ -79,7 +79,7 @@
         if (action_type == 'edit') {
 
             $.ajax({
-                url: '{{URL::to(' / ')}}/admin/editcustomerpopup',
+                url: '{{URL::to(trim('/'))}}/admin/editcustomerpopup',
                 type: 'POST',
                 data: {customer_id: customer_id},
                 success: function (response) {
@@ -93,7 +93,7 @@
         } else if (action_type == 'delete') {
             if (confirm('Are you sure to delete the customer')) {
                 $.ajax({
-                    url: '{{URL::to(' / ')}}/admin/deletecustomer',
+                    url: '{{URL::to(trim('/'))}}/admin/deletecustomer',
                     type: 'POST',
                     data: {customer_id: customer_id},
                     success: function (response) {

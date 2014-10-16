@@ -109,7 +109,7 @@
         //perform an AJAX post to ajax.php
         submitHandler: function () {
             $.ajax({
-                url: '{{URL::to(' / ')}}/admin/addvariant',
+                url: '{{URL::to(trim('/'))}}/admin/addvariant',
                 type: 'POST',
                 data: $("#add_variant_form").serialize(),
                 success: function (response) {

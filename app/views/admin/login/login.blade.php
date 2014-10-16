@@ -12,16 +12,16 @@
     <title>Cardunia</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{URL::to('/')}}/dashboard/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{URL::to(trim('/'))}}/dashboard/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="{{URL::to('/')}}/dashboard/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="{{URL::to(trim('/'))}}/dashboard/css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="{{URL::to('/')}}/dashboard/css/sb-admin-2.css" rel="stylesheet">
+    <link href="{{URL::to(trim('/'))}}/dashboard/css/sb-admin-2.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="{{URL::to('/')}}/dashboard/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet"
+    <link href="{{URL::to(trim('/'))}}/dashboard/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet"
           type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -76,16 +76,16 @@
 </div>
 
 <!-- jQuery Version 1.11.0 -->
-<script src="{{URL::to('/')}}/dashboard/js/jquery-1.11.0.js"></script>
+<script src="{{URL::to(trim('/'))}}/dashboard/js/jquery-1.11.0.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="{{URL::to('/')}}/dashboard/js/bootstrap.min.js"></script>
+<script src="{{URL::to(trim('/'))}}/dashboard/js/bootstrap.min.js"></script>
 
 <!-- Metis Menu Plugin JavaScript -->
-<script src="{{URL::to('/')}}/dashboard/js/plugins/metisMenu/metisMenu.min.js"></script>
+<script src="{{URL::to(trim('/'))}}/dashboard/js/plugins/metisMenu/metisMenu.min.js"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="{{URL::to('/')}}/dashboard/js/sb-admin-2.js"></script>
+<script src="{{URL::to(trim('/'))}}/dashboard/js/sb-admin-2.js"></script>
 
 </body>
 

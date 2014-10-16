@@ -84,7 +84,7 @@
         var enquiry_id = composite_arr[1];
         if (confirm('Are you sure to delete the enquiry')) {
             $.ajax({
-                url: '{{URL::to(' / ')}}/admin/deleteenquiry',
+                url: '{{URL::to('  /  ')}}/admin/deleteenquiry',
                 type: 'POST',
                 data: {enquiry_id: enquiry_id},
                 success: function (response) {

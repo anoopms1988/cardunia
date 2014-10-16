@@ -111,7 +111,7 @@
         submitHandler: function () {
 
             $.ajax({
-                url: '{{URL::to(' / ')}}/admin/manipulatedealer',
+                url: '{{URL::to(trim('/'))}}/admin/manipulatedealer',
                 type: 'POST',
                 data: $("#editdealer_form").serialize(),
                 success: function (response) {

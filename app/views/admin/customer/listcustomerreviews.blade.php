@@ -92,7 +92,7 @@
         if (action_type == 'editapprove') {
             if (confirm('Are you sure to approve the review')) {
                 $.ajax({
-                    url: '{{URL::to('/')}}/admin/reviewapprove',
+                    url: '{{URL::to(trim('/'))}}/admin/reviewapprove',
                     type: 'POST',
                     data: {review_id: review_id, approve: 1},
                     success: function (response) {
@@ -110,7 +110,7 @@
         } else if (action_type == 'editdisapprove') {
             if (confirm('Are you sure to disapprove the review')) {
                 $.ajax({
-                    url: '{{URL::to('/')}}/admin/reviewapprove',
+                    url: '{{URL::to(trim('/'))}}/admin/reviewapprove',
                     type: 'POST',
                     data: {review_id: review_id, approve: 0},
                     success: function (response) {
@@ -129,7 +129,7 @@
         } else if (action_type == 'delete') {
             if (confirm('Are you sure to delete the review')) {
                 $.ajax({
-                    url: '{{URL::to(' / ')}}/admin/deletereview',
+                    url: '{{URL::to(trim('/'))}}/admin/deletereview',
                     type: 'POST',
                     data: {review_id: review_id},
                     success: function (response) {
