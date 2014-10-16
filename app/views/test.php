@@ -52,7 +52,7 @@
 <ul class="nav navbar-top-links navbar-right">
 <li class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <i class="fa fa-envelope fa-fw"></i>  <i class="fa fa-caret-down"></i>
+        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
     </a>
     <ul class="dropdown-menu dropdown-messages">
         <li>
@@ -103,7 +103,7 @@
 <!-- /.dropdown -->
 <li class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <i class="fa fa-tasks fa-fw"></i>  <i class="fa fa-caret-down"></i>
+        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
     </a>
     <ul class="dropdown-menu dropdown-tasks">
         <li>
@@ -113,8 +113,10 @@
                         <strong>Task 1</strong>
                         <span class="pull-right text-muted">40% Complete</span>
                     </p>
+
                     <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
+                             aria-valuemin="0" aria-valuemax="100" style="width: 40%">
                             <span class="sr-only">40% Complete (success)</span>
                         </div>
                     </div>
@@ -129,8 +131,10 @@
                         <strong>Task 2</strong>
                         <span class="pull-right text-muted">20% Complete</span>
                     </p>
+
                     <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+                             aria-valuemin="0" aria-valuemax="100" style="width: 20%">
                             <span class="sr-only">20% Complete</span>
                         </div>
                     </div>
@@ -145,8 +149,10 @@
                         <strong>Task 3</strong>
                         <span class="pull-right text-muted">60% Complete</span>
                     </p>
+
                     <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+                             aria-valuemin="0" aria-valuemax="100" style="width: 60%">
                             <span class="sr-only">60% Complete (warning)</span>
                         </div>
                     </div>
@@ -161,8 +167,10 @@
                         <strong>Task 4</strong>
                         <span class="pull-right text-muted">80% Complete</span>
                     </p>
+
                     <div class="progress progress-striped active">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
+                             aria-valuemin="0" aria-valuemax="100" style="width: 80%">
                             <span class="sr-only">80% Complete (danger)</span>
                         </div>
                     </div>
@@ -182,7 +190,7 @@
 <!-- /.dropdown -->
 <li class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <i class="fa fa-bell fa-fw"></i>  <i class="fa fa-caret-down"></i>
+        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
     </a>
     <ul class="dropdown-menu dropdown-alerts">
         <li>
@@ -242,7 +250,7 @@
 <!-- /.dropdown -->
 <li class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
     </a>
     <ul class="dropdown-menu dropdown-user">
         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
@@ -381,16 +389,20 @@
                 <!-- /.panel-heading -->
                 <div class="panel-body">
                     <div class="alert alert-success">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert Link</a>.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert
+                            Link</a>.
                     </div>
                     <div class="alert alert-info">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert Link</a>.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert
+                            Link</a>.
                     </div>
                     <div class="alert alert-warning">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert Link</a>.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert
+                            Link</a>.
                     </div>
                     <div class="alert alert-danger">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert Link</a>.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert
+                            Link</a>.
                     </div>
                 </div>
                 <!-- .panel-body -->
@@ -407,19 +419,23 @@
                 <div class="panel-body">
                     <div class="alert alert-success alert-dismissable">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert Link</a>.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert
+                            Link</a>.
                     </div>
                     <div class="alert alert-info alert-dismissable">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert Link</a>.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert
+                            Link</a>.
                     </div>
                     <div class="alert alert-warning alert-dismissable">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert Link</a>.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert
+                            Link</a>.
                     </div>
                     <div class="alert alert-danger alert-dismissable">
                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert Link</a>.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#" class="alert-link">Alert
+                            Link</a>.
                     </div>
                 </div>
                 <!-- .panel-body -->
@@ -442,15 +458,22 @@
                         Launch Demo Modal
                     </button>
                     <!-- Modal -->
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                         aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <button type="button" class="close" data-dismiss="modal"
+                                            aria-hidden="true">&times;</button>
                                     <h4 class="modal-title" id="myModalLabel">Modal title</h4>
                                 </div>
                                 <div class="modal-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                    deserunt mollit anim id est laborum.
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -476,25 +499,43 @@
                 <!-- /.panel-heading -->
                 <div class="panel-body">
                     <h4>Tooltip Demo</h4>
+
                     <div class="tooltip-demo">
-                        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
-                        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
-                        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
-                        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+                        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left"
+                                title="Tooltip on left">Tooltip on left
+                        </button>
+                        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top"
+                                title="Tooltip on top">Tooltip on top
+                        </button>
+                        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom"
+                                title="Tooltip on bottom">Tooltip on bottom
+                        </button>
+                        <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right"
+                                title="Tooltip on right">Tooltip on right
+                        </button>
                     </div>
                     <br>
                     <h4>Clickable Popover Demo</h4>
+
                     <div class="tooltip-demo">
-                        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover"
+                                data-placement="left"
+                                data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
                             Popover on left
                         </button>
-                        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover"
+                                data-placement="top"
+                                data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
                             Popover on top
                         </button>
-                        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover"
+                                data-placement="bottom"
+                                data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
                             Popover on bottom
                         </button>
-                        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                        <button type="button" class="btn btn-default" data-container="body" data-toggle="popover"
+                                data-placement="right"
+                                data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
                             Popover on right
                         </button>
                     </div>

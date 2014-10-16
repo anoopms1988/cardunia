@@ -4,8 +4,12 @@
 <div class="col-lg-12">
     <div class="panel panel-default">
         <div class="panel-heading">
-           Enquiry Details
-            {{--<button  id="edit_nothing"  class="manipulateenquirydetails btn btn-primary btn-lg " data-target="#enquiryModal" data-toggle="modal"> Add new enquiry </button>--}}
+            Enquiry Details
+            {{--
+            <button id="edit_nothing" class="manipulateenquirydetails btn btn-primary btn-lg "
+                    data-target="#enquiryModal" data-toggle="modal"> Add new enquiry
+            </button>
+            --}}
         </div>
         <!-- /.panel-heading -->
 
@@ -28,13 +32,21 @@
                     @foreach($enquiryDetails as $enquiryDetails_key=>$enquiryDetails_value)
                     <tr class="odd gradeX">
                         <td>{{{$enquiryDetails_value->enquiryType()->first()->type or ''}}}</td>
-                        <td>{{{$enquiryDetails_value->customer()->first()->first_name  or ''}}}&nbsp;{{{$enquiryDetails_value->customer()->first()->last_name  or ''}}}</td>
-                        <td>{{{$enquiryDetails_value->customer()->first()->email  or ''}}}</td>
-                        <td>{{{$enquiryDetails_value->customer()->first()->mobilenumber  or ''}}}</td>
+                        <td>{{{$enquiryDetails_value->customer()->first()->first_name or ''}}}&nbsp;{{{$enquiryDetails_value->customer()->first()->last_name
+                            or ''}}}
+                        </td>
+                        <td>{{{$enquiryDetails_value->customer()->first()->email or ''}}}</td>
+                        <td>{{{$enquiryDetails_value->customer()->first()->mobilenumber or ''}}}</td>
                         <td>{{{$enquiryDetails_value->enquiry or ''}}}</td>
                         <td>
-                            {{--<button id="edit_{{$enquiryDetails_value->id}}" class="manipulateenquirydetails btn btn-primary btn-circle" type="button" data-target="#enquiryModal" data-toggle="modal"><i class="fa fa-list"></i></button>--}}
-                            <button id="delete_{{$enquiryDetails_value->id}}" class="manipulateenquirydetails btn btn-warning btn-circle" type="button"><i class="fa fa-times"></i></button>
+                            {{--
+                            <button id="edit_{{$enquiryDetails_value->id}}"
+                                    class="manipulateenquirydetails btn btn-primary btn-circle" type="button"
+                                    data-target="#enquiryModal" data-toggle="modal"><i class="fa fa-list"></i></button>
+                            --}}
+                            <button id="delete_{{$enquiryDetails_value->id}}"
+                                    class="manipulateenquirydetails btn btn-warning btn-circle" type="button"><i
+                                    class="fa fa-times"></i></button>
                         </td>
                     </tr>
 
@@ -65,32 +77,30 @@
 <script type="text/javascript">
 
 
-
-    $('.manipulateenquirydetails').click(function(){
-              var composite_id=this.id;
-                    var composite_arr=composite_id.split('_');
-                    var action_type=composite_arr[0];
-                    var enquiry_id=composite_arr[1];
-             if (confirm('Are you sure to delete the enquiry')) {
-                        $.ajax({
-                            url: '{{URL::to('/')}}/admin/deleteenquiry',
-                            type: 'POST',
-                            data: {enquiry_id:enquiry_id},
-                            success: function (response) {
-                                if (response.msg == 'success') {
-                                    setTimeout(function(){location.reload(true)}, 3000);
-                                }
-                            },
-                            error: function () {
-                                alert("error");
-                            }
-                        });
+    $('.manipulateenquirydetails').click(function () {
+        var composite_id = this.id;
+        var composite_arr = composite_id.split('_');
+        var action_type = composite_arr[0];
+        var enquiry_id = composite_arr[1];
+        if (confirm('Are you sure to delete the enquiry')) {
+            $.ajax({
+                url: '{{URL::to(' / ')}}/admin/deleteenquiry',
+                type: 'POST',
+                data: {enquiry_id: enquiry_id},
+                success: function (response) {
+                    if (response.msg == 'success') {
+                        setTimeout(function () {
+                            location.reload(true)
+                        }, 3000);
                     }
+                },
+                error: function () {
+                    alert("error");
+                }
+            });
+        }
 
     });
-
-
-
 
 
 </script>

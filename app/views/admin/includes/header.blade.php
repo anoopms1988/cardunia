@@ -282,9 +282,7 @@
             <li>
                <a   @if(isset($currentmenu)&&$currentmenu=='car') class='active' @endif href="/admin/dashboard"><i class="fa fa-dashboard fa-fw"></i> Cars</a>
             </li>
-             <li>
-                           <a  href="" ><i class="fa fa-dashboard fa-fw"></i> Car Accessories</a>
-                       </li>
+
                         <li >
                            <a data-toggle="collapse" href="#" ><i class="collapsable fa fa-bar-chart-o fa-fw"></i>General management<span class="fa arrow"></span></a>
                            <ul  @if(isset($mainmenu)&&$mainmenu=='generalmanagement') class='nav nav-second-level collapse in' @else class="nav nav-second-level" @endif>
@@ -294,9 +292,7 @@
                                <li>
                                   <a @if(isset($currentmenu)&&$currentmenu=='customer') class="'active" @endif href="/admin/customers" >Car customers</a>
                                 </li>
-                                <li>
-                                  <a @if(isset($currentmenu)&&$currentmenu=='review') class="'active" @endif href="/admin/reviews">Car reviews</a>
-                               </li>
+
                                <li>
                                    <a @if(isset($currentmenu)&&$currentmenu=='enquiry') class="'active" @endif href="/admin/enquiry">Customer enquiry</a>
                                </li>
@@ -311,13 +307,30 @@
                                 <li>
                                     <a @if(isset($currentmenu)&&$currentmenu=='insurance') class="'active" @endif href="/admin/insurance">Insurance enquiries</a>
                                  </li>
-                                <li>
+                               {{-- <li>
                                     <a @if(isset($currentmenu)&&$currentmenu=='loan') class="'active" @endif href="/admin/loan" >Loan enquiries</a>
-                                </li>
+                                </li>--}}
 
                            </ul>
                                                    <!-- /.nav-second-level -->
                          </li>
+                         <li >
+                             <a data-toggle="collapse" href="#" ><i class="collapsable fa fa-bar-chart-o fa-fw"></i>Reviews<span class="fa arrow"></span></a>
+                               <ul  @if(isset($mainmenu)&&$mainmenu=='generalreviews') class='nav nav-second-level collapse in' @else class="nav nav-second-level" @endif>
+                                    <li>
+                                              <a @if(isset($currentmenu)&&$currentmenu=='review') class="'active" @endif href="/admin/reviews">Customer reviews</a>
+                                     </li>
+                                      <li>
+                                                <a @if(isset($currentmenu)&&$currentmenu=='editorialreview') class="'active" @endif href="/admin/editorialreviews">Editorial reviews</a>
+                                      </li>
+                                           {{-- <li>
+                                                <a @if(isset($currentmenu)&&$currentmenu=='loan') class="'active" @endif href="/admin/loan" >Loan enquiries</a>
+                                            </li>--}}
+
+                                </ul>
+                                                               <!-- /.nav-second-level -->
+                          </li>
+
 
         </ul>
     </div>

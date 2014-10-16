@@ -1,4 +1,3 @@
-
 <div class="navbar-default sidebar" role="navigation">
     <div class="sidebar-nav navbar-collapse">
         <ul class="nav" id="side-menu">
@@ -14,32 +13,35 @@
                 <!-- /input-group -->
             </li>
             <li>
-                <a  href="/admin/dashboard"><i class="fa fa-dashboard fa-fw"></i> Cars</a>
+                <a href="/admin/dashboard"><i class="fa fa-dashboard fa-fw"></i> Cars</a>
             </li>
             <li>
-                <a  href=""><i class="fa fa-dashboard fa-fw"></i> Car Accessories</a>
+                <a href=""><i class="fa fa-dashboard fa-fw"></i> Car Accessories</a>
             </li>
-             <li >
-                <a data-toggle="collapse " href="#"><i class="collapsable fa fa-bar-chart-o fa-fw"></i>General management<span class="fa arrow"></span></a>
-                <ul  class="nav nav-second-level ">
+            <li>
+                <a data-toggle="collapse " href="#"><i class="collapsable fa fa-bar-chart-o fa-fw"></i>General
+                    management<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level ">
                     <li>
                         <a href="/admin/dealers">Car dealers</a>
                     </li>
                     <li>
-                       <a href="/admin/customers">Car customers</a>
-                     </li>
-                     <li>
-                       <a href="/admin/reviews">Car reviews</a>
+                        <a href="/admin/customers">Car customers</a>
+                    </li>
+                    <li>
+                        <a href="/admin/reviews">Car reviews</a>
                     </li>
                     <li>
                         <a href="/admin/enquiry">Customer enquiry</a>
                     </li>
-                    {{--<li>
+                    {{--
+                    <li>
                         <a href="morris.html">Morris.js Charts</a>
-                    </li>--}}
+                    </li>
+                    --}}
                 </ul>
                 <!-- /.nav-second-level -->
-             </li>
+            </li>
 
 
         </ul>

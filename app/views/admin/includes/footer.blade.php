@@ -1,6 +1,3 @@
-
-
-
 <!-- /.row -->
 </div>
 <!-- /#page-wrapper -->
@@ -21,7 +18,8 @@
 <script src="{{URL::to('/')}}/dashboard/js/plugins/metisMenu/metisMenu.min.js"></script>
 
 <!-- Morris Charts JavaScript -->
-{{--<script src="{{URL::to('/')}}/dashboard/js/plugins/morris/raphael.min.js"></script>
+{{--
+<script src="{{URL::to('/')}}/dashboard/js/plugins/morris/raphael.min.js"></script>
 <script src="{{URL::to('/')}}/dashboard/js/plugins/morris/morris.min.js"></script>
 <script src="{{URL::to('/')}}/dashboard/js/plugins/morris/morris-data.js"></script>--}}
 
