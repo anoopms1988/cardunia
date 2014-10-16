@@ -155,5 +155,58 @@ class CustomerAdminController extends BaseController
         }
     }
 
+    public function displayEditorialReviewsPopup()
+    {
+        $mainmenu    = 'generalreviews';
+        $currentmenu = 'editorialreview';
+        $reviewId  = Input::get('review_id', null);
+        $companies   = Company::all();
+        $cars        =Car::where('is_active', '=', '1')->get();
+        if ($reviewId) {
+            $EditorialReview = EditorialReview::find($reviewId);
+        } else {
+            $EditorialReview = null;
+        }
+        return View::make(
+            'admin.car.editorialreviewpopup',
+            array('EditorialReview'    => $EditorialReview, 'cars' => $cars, 'companies' => $companies, 'mainmenu' => $mainmenu,
+                  'currentmenu' => $currentmenu)
+        );
+    }
+
+    public function manipulateEditorialReview()
+    {
+        $reviewId   = Input::get('editreview_id', null);
+        $review    = Input::get('review', null);
+        $variant   =Input::get('variant', null);
+
+
+        if ($reviewId) {
+            $EditorialReview              = EditorialReview ::find($reviewId);
+            $EditorialReview->review   = $review;
+        } else {
+            $EditorialReview               = new EditorialReview ();
+            $EditorialReview->variant_id    = $variant;
+            $EditorialReview->review    = $review;
+        }
+        $EditorialReview->save();
+        //return  Redirect::to('admin/dealers' );
+        return Response::json(array('msg' => 'success'));
+    }
+
+    public function fetchCompanySpecificCars()
+    {
+        $companyId=Input::get('company_id', null);
+        $specificCars=Car::where('company_id','=',$companyId)->get();
+        return View::make('admin.car.specificcarsview',array('specificCars'=>$specificCars));
+    }
+
+    public function fetchCarSpecificVariants()
+    {
+        $carId=Input::get('car_id', null);
+        $specificVariants=Variant::where('car_id','=',$carId)->get();
+        return View::make('admin.car.listvariants',array('specificVariants'=>$specificVariants));
+    }
+
 
 }

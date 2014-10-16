@@ -62,6 +62,11 @@ Route::group(
         Route::get('insurance','GeneralEnquiriesAdminController@listInsuranceEnquiries');
         Route::get('editorialreviews','CustomerAdminController@listEditorialReviews');
         Route::post('deleteeditorialreview','CustomerAdminController@deleteEditorialReviews');
+        Route::post('editoralreviewpopup','CustomerAdminController@displayEditorialReviewsPopup');
+        Route::post('manipulateeditorialreview','CustomerAdminController@manipulateEditorialReview');
+        Route::post('getcars','CustomerAdminController@fetchCompanySpecificCars');
+        Route::post('getvariants','CustomerAdminController@fetchCarSpecificVariants');
+
         // Route::post('customers','CustomerAdminController@listAllCustomers');
 
 
