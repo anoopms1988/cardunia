@@ -60,8 +60,15 @@
 </div>
 <div class="copy-right">
     <div class="wrap">
-        <p>Design by <a href="http://w3layouts.com/"> W3layouts</a></p>
+        <p>All rights reserved <a href="#"> Cardunia</a></p>
     </div>
 </div>
+<!-- jQuery Version 1.11.0 -->
+<script src="{{URL::to(trim('/'))}}/dashboard/js/jquery-1.11.0.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="{{URL::to(trim('/'))}}/dashboard/js/bootstrap.min.js"></script>
+<script src="{{URL::to(trim('/'))}}/dashboard/js/jqueryvalidate.js"></script>
+
 </body>
 </html>

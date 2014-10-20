@@ -11,8 +11,14 @@
 |
 */
 
+/*
+ * Frontend routes
+ */
 Route::get('/', 'HomeController@showWelcome');
-
+Route::get('specificcompanycars/{id}', 'CompaniesController@listSpecificCompanyCars');
+/*
+ * Admin routes
+ */
 Route::group(
     ['prefix' => 'admin'], function () {
 

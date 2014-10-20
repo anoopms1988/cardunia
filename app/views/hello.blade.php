@@ -1,67 +1,128 @@
-<!DOCTYPE html>
-<html lang="en">
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free coming soon template with jQuery countdown">
-    <meta name="author" content="http://bootstraptaste.com">
-    <link rel="shortcut icon" href="{{URL::to(trim('/'))}}/assets/img/favicon.png">
-
-    <title>Cardunia</title>
-
-    <!-- Bootstrap -->
-    <link href="{{URL::to(trim('/'))}}/assets/css/bootstrap.css" rel="stylesheet">
-    <link href="{{URL::to(trim('/'))}}/assets/css/bootstrap-theme.css" rel="stylesheet">
-
-    <!-- siimple style -->
-    <link href="assets/css/style.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+    <title>Free Cars-Sale Website Template | Services :: w3layouts</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.lightbox.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/lightbox.css" media="screen">
+    <script type="text/javascript">
+        $(function() {
+            $('.gallery-grid a').lightBox();
+        });
+    </script>
 </head>
-
 <body>
-
-<div id="wrapper">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-                <h1>Cardunia</h1>
-
-                <h2 class="subtitle">We're working hard to launch our first beta product.Thanks for showing interest in
-                    our service</h2>
-
-                <div id="countdown"></div>
-                {{--
-                <form class="form-inline signup" role="form">
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1"
-                               placeholder="Enter your email address">
-                    </div>
-                    <button type="submit" class="btn btn-theme">Get notified!</button>
-                </form>
-                --}}
+<div class="header">
+    <div class="wrap">
+        <div class="header-bot">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt=""></a>
             </div>
-
-        </div>
-        <div class="row">
-            <div class="col-lg-6 col-lg-offset-3">
-                <p class="copyright">Copyright &copy; 2014 - <a href="#">Cardunia.com</a></p>
+            <div class="cart">
+                <ul class="ph-no">
+                    <li class="item  first_item">
+                        <div class="item_html">
+                            <span class="text1">Order delivery:</span>
+                            <span class="text2">+800-0005-5289</span>
+                        </div>
+                    </li>
+                </ul>
+                <div id="top-search">
+                    <form method="get" action="http://livedemo00.template-help.com/jigoshop_45422/">
+                        <input type="text" name="s" class="input-search"><input type="submit" value="Search" id="submit">
+                    </form>
+                </div>
+                <div class="menu-main">
+                    <ul class="dc_css3_menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="active"><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
             </div>
+            <div class="clear"></div>
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="{{URL::to(trim('/'))}}/assets/js/bootstrap.min.js"></script>
-<script src="{{URL::to(trim('/'))}}/assets/js/jquery.countdown.min.js"></script>
-<script type="text/javascript">
-    $('#countdown').countdown('2015/01/01', function (event) {
-        $(this).html(event.strftime('%w weeks %d days <br /> %H:%M:%S'));
-    });
-</script>
+
+<div class="footer">
+    <div class="wrap">
+        <div class="footer-top">
+            <div class="col_1_of_5 span_1_of_5">
+                <div class="footer-grid twitts">
+                    <h3>Latest Tweets</h3>
+                    <p><label>@Lorem ipsum</label>dolor sit amet, consectetur adipisicing elit.</p>
+                    <span>10 minutes ago</span>
+                    <p><label>@consectetur</label>dolor sit amet, consectetur adipisicing elit.</p>
+                    <span>15 minutes ago</span>
+                </div>
+            </div>
+            <div class="col_1_of_5 span_1_of_5">
+                <div class="footer-grid center-grid">
+                    <h3>Recent posts</h3>
+                    <ul>
+                        <li><a href="#">eiusmod temporinc</a></li>
+                        <li><a href="#">adipisicing elit, sed</a></li>
+                        <li><a href="#">mod tempor incididunt</a></li>
+                        <li><a href="#">dipisicing elit, sed do</a></li>
+                        <li><a href="#">eiusmod temporinc</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col_1_of_5 span_1_of_5">
+                <div class="footer-grid twitts">
+                    <h3>Our Company</h3>
+                    <div class="f_menu">
+                        <ul>
+                            <li>About your Company Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh eui</li>
+                            <li>Terms &amp; conditions Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh eui</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col_1_of_5 span_1_of_5">
+                <div class="call_info">
+                    <p class="txt_3">Call us toll free:</p>
+                    <p class="txt_4">1 800 234 23456</p>
+                </div>
+            </div>
+            <div class="col_1_of_5 span_1_of_5">
+                <div class="footer-grid twitts">
+                    <h3>Get in touch</h3>
+                    <ul class="follow_icon">
+                        <li><a href="#" style="opacity: 1;"><img src="images/follow_icon.png" alt=""></a></li>
+                        <li><a href="#" style="opacity: 1;"><img src="images/follow_icon1.png" alt=""></a></li>
+                        <li><a href="#" style="opacity: 1;"><img src="images/follow_icon2.png" alt=""></a></li>
+                        <li><a href="#" style="opacity: 1;"><img src="images/follow_icon3.png" alt=""></a></li>
+                        <li><a href="#" style="opacity: 1;"><img src="images/follow_icon4.png" alt=""></a></li>
+                        <li><a href="#" style="opacity: 1;"><img src="images/follow_icon5.png" alt=""></a></li>
+                    </ul>
+                    <p>+1 111-111-1111</p>
+                    <span>support(at)carssale.com</span>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<div class="copy-right">
+    <div class="wrap">
+        <p>Design by <a href="http://w3layouts.com/"> W3layouts</a></p>
+    </div>
+</div>
 </body>
 </html>
+
+
+
