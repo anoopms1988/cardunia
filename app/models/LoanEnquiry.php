@@ -36,4 +36,14 @@ class LoanEnquiry extends Eloquent implements UserInterface, RemindableInterface
         return $this->belongsTo('City');
     }
 
+    public function carType()
+    {
+        return $this->belongsTo('Cartype','cartype_id');
+    }
+
+    public function variant()
+    {
+        return $this->belongsTo('Variant');
+    }
+
 }

@@ -79,7 +79,6 @@ class CarAdminController extends BaseController
             exit();
         }
 
-
         $newCar             = new Car();
         $newCar->name       = $carName;
         $newCar->company_id = $companyName;
@@ -127,7 +126,6 @@ class CarAdminController extends BaseController
 
         } else {
             $Dimension = new Dimension();
-
             $Dimension->variant_id = $variantId;
             $Dimension->length     = $length;
             $Dimension->width      = $width;

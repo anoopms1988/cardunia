@@ -60,6 +60,7 @@ Route::group(
         Route::get('enquiry','GeneraldetailsAdminController@listCustomerEnquiries');
         Route::post('deleteenquiry','GeneraldetailsAdminController@deleteCustomerEnquiries');
         Route::get('insurance','GeneralEnquiriesAdminController@listInsuranceEnquiries');
+        Route::get('loan','GeneralEnquiriesAdminController@listLoanEnquiries');
         Route::get('editorialreviews','CustomerAdminController@listEditorialReviews');
         Route::post('deleteeditorialreview','CustomerAdminController@deleteEditorialReviews');
         Route::post('editoralreviewpopup','CustomerAdminController@displayEditorialReviewsPopup');

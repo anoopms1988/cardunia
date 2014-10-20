@@ -22,7 +22,9 @@ class GeneralEnquiriesAdminController extends BaseController
 
     public function listLoanEnquiries()
     {
-
+        $currentmenu='loan';
+        $loanEnquiryDetails=LoanEnquiry::paginate(10);
+        return View::make('admin.generalenquiries.listloanenquiries',array('loanEnquiryDetails'=>$loanEnquiryDetails,'mainmenu'=>$this->mainmenu,'currentmenu'=>$currentmenu));
     }
 
 
