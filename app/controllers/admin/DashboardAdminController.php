@@ -20,10 +20,7 @@ class DashboardAdminController extends BaseController
 
     public function welcome()
     {
-       /* if(Auth::check()) {
-        }else{
-            return Redirect::to('/admin');
-        }*/
+
         $companyDetails=Company::all();
         $carDetails=Car::where('is_active', '=',1)->paginate(10);
         return View::make('admin.dashboard.welcome',array('carDetails'=>$carDetails,'companyDetails'=>$companyDetails,'currentMenu'=>$this->currentMenu));

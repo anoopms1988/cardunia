@@ -22,7 +22,8 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
-		return View::make('hello');
+        $companies=Company::all();
+		return View::make('site.cars.company',array('companies'=>$companies));
 	}
 
 }
