@@ -7,18 +7,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Free Cars-Sale Website Template | Services :: w3layouts</title>
+    <title>Free Cars-Sale Website Template | About :: w3layouts</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.lightbox.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/lightbox.css" media="screen">
-    <script type="text/javascript">
-        $(function() {
-            $('.gallery-grid a').lightBox();
-        });
-    </script>
 </head>
 <body>
 <div class="header">
@@ -44,8 +36,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="menu-main">
                     <ul class="dc_css3_menu">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li class="active"><a href="services.html">Services</a></li>
+                        <li class="active"><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                     <div class="clear"></div>

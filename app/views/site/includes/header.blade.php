@@ -18,7 +18,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <div class="wrap">
         <div class="header-bot">
             <div class="logo">
-               <!-- <a href="index.html"><img src="{{URL::to(trim('/'))}}/frontend/images/logo.png" alt=""></a>-->
+               <a href="{{URL::to(trim('/'))}}"><img src="{{URL::to(trim('/'))}}/frontend/images/logo.png" alt=""></a>
             </div>
             <div class="cart">
                 <ul class="ph-no">
@@ -37,7 +37,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="menu-main">
                     <ul class="dc_css3_menu">
                         <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="/aboutus">About</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
