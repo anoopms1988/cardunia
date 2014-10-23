@@ -5,7 +5,8 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class Fuelefficiency extends Eloquent implements UserInterface, RemindableInterface {
+class Fuelefficiency extends Eloquent implements UserInterface, RemindableInterface
+{
 
     use UserTrait, RemindableTrait;
 

@@ -10,7 +10,8 @@ use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class InsuranceEnquiry extends Eloquent implements UserInterface, RemindableInterface {
+class InsuranceEnquiry extends Eloquent implements UserInterface, RemindableInterface
+{
 
     use UserTrait, RemindableTrait;
 

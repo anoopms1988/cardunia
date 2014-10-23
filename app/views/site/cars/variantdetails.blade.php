@@ -94,6 +94,7 @@
                             <td>{{{$specificVariant->wheel()->first()->wheeltype or ''}}}</td>
                         </tr>
                     </table>
+
                 </div>
 
                 <div class="clear"> </div>
