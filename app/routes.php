@@ -18,6 +18,7 @@ Route::get('/', 'HomeController@showWelcome');
 Route::get('specificcompanycars/{id}', 'CompaniesController@listSpecificCompanyCars');
 Route::get('aboutus','GeneralController@showCompanyDetails');
 Route::get('showvariants/{id}','CarController@showVariants');
+Route::get('variantdetails/{id}','CarController@variantDetails');
 
 /*
  * Admin routes

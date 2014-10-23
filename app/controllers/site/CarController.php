@@ -19,4 +19,10 @@ class CarController extends BaseController
         return View::make('site.cars.specificvariants',array('specificVariants'=>$specificVariants));
     }
 
+    public function variantDetails($variantId=null)
+    {
+          $specificVariant=Variant::find($variantId);
+          return View::make('site.cars.variantdetails',array('specificVariant'=>$specificVariant));
+    }
+
 }
